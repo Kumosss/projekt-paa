@@ -8,6 +8,7 @@ const init = async () => (
       !error ? resolve() : reject()
     })
   })
+)
 const createTask = async (title) => (
   new Promise((resolve, reject) => {
     const generator = storage.TableUtilities.entityGenerator
