@@ -1,9 +1,9 @@
-const tasks = require('./routes/tasks')
+var tasks = require('./routes/tasks');
 var app = require('koa')()
-  , logger = require('koa-logger')
-  , json = require('koa-json')
-  , views = require('koa-views')
-  , onerror = require('koa-onerror');
+var logger = require('koa-logger')
+var json = require('koa-json')
+var views = require('koa-views')
+var onerror = require('koa-onerror');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
