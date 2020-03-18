@@ -1,3 +1,4 @@
+const tasks = require('./routes/tasks')
 var app = require('koa')()
   , logger = require('koa-logger')
   , json = require('koa-json')
@@ -31,6 +32,7 @@ app.use(require('koa-static')(__dirname + '/public'));
 // routes definition
 app.use(index.routes(), index.allowedMethods());
 app.use(users.routes(), users.allowedMethods());
+app.use(tasks.routes(), tasks.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {
